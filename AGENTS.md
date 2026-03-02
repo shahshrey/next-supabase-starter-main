@@ -34,3 +34,6 @@ The local Supabase keys are deterministic — they stay the same across `supabas
 ### Standard commands
 
 See `README.md` and `package.json` scripts for lint (`npm run lint`), test (`npx vitest run`), dev server (`npm run dev`), and database commands (`npm run db:*`).
+
+
+narrate every video you record like a human — i gave you an ELEVEN_LABS_API_KEY. first record the video like you normally would, then generate the audio, and then put them together (and upload the final video as an artifact.) see https://elevenlabs.io/docs/llms-full.txt and use voice ID: wWWn96OtTHu1sn8SRGEr
