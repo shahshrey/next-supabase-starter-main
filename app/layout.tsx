@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js + Supabase Starter",
-  description: "A modern web application with authentication",
+  title: "FlowTask — Ship projects on time, every time",
+  description:
+    "FlowTask brings your team's work together. Organize tasks, hit deadlines, and celebrate wins — all in one beautiful workspace.",
 };
 
 export default function RootLayout({
