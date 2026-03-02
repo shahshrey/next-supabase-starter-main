@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js + Supabase Starter",
-  description: "A modern web application with authentication",
+  title: "TaskFlow — Manage tasks, ship faster",
+  description: "The smart task manager built for teams that move fast. Organize, prioritize, and get things done — all in one place.",
 };
 
 export default function RootLayout({
