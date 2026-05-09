@@ -16,7 +16,6 @@ import {
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast'
-import { useFormStatus } from 'react-dom'
 
 const formSchema = z.object({
   email: z.string().email('Invalid email address'),
@@ -25,12 +24,10 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>
 
-function SubmitButton() {
-  const { pending } = useFormStatus()
-  
+function SubmitButton({ isSubmitting }: { isSubmitting: boolean }) {
   return (
-    <Button type="submit" className="w-full" disabled={pending}>
-      {pending ? 'Signing in...' : 'Sign In'}
+    <Button type="submit" className="w-full" disabled={isSubmitting}>
+      {isSubmitting ? 'Signing in...' : 'Sign In'}
     </Button>
   )
 }
@@ -64,7 +61,7 @@ export function SignInForm() {
 
   return (
     <Form {...form}>
-      <form action={form.handleSubmit(onSubmit)} className="space-y-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
           name="email"
@@ -99,7 +96,7 @@ export function SignInForm() {
             </FormItem>
           )}
         />
-        <SubmitButton />
+        <SubmitButton isSubmitting={form.formState.isSubmitting} />
       </form>
     </Form>
   )

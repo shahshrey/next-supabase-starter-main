@@ -6,12 +6,17 @@ import { signOut } from '@/server/actions/auth'
 export default async function DashboardPage() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
+  const handleSignOut = async () => {
+    'use server'
+
+    await signOut()
+  }
 
   return (
     <div className="container mx-auto py-8">
       <div className="mb-8 flex items-center justify-between">
         <h1 className="text-3xl font-bold">Dashboard</h1>
-        <form action={signOut}>
+        <form action={handleSignOut}>
           <Button variant="outline" type="submit">
             Sign Out
           </Button>
