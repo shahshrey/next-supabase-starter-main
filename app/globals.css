@@ -40,6 +40,22 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-accent: var(--brand-accent);
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 :root {
@@ -75,6 +91,10 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --brand: oklch(0.55 0.21 277);
+  --brand-foreground: oklch(0.985 0 0);
+  --brand-muted: oklch(0.95 0.03 277);
+  --brand-accent: oklch(0.72 0.16 195);
 }
 
 .dark {
@@ -109,6 +129,10 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --brand: oklch(0.64 0.19 277);
+  --brand-foreground: oklch(0.145 0 0);
+  --brand-muted: oklch(0.27 0.05 277);
+  --brand-accent: oklch(0.78 0.14 195);
 }
 
 @layer base {

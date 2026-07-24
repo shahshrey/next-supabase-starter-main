@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
@@ -14,8 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js + Supabase Starter",
-  description: "A modern web application with authentication",
+  title: "Tick — Your to-do list, finally under control",
+  description:
+    "Tick is a calm to-do app for people with more to remember than they have room for. Capture in a keystroke, sort in seconds, and finish the day empty.",
+  openGraph: {
+    title: "Tick — Your to-do list, finally under control",
+    description:
+      "Capture in a keystroke, sort in seconds, and finish the day empty. A calm to-do app for busy people.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -24,12 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-        <Toaster />
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
