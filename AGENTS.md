@@ -35,5 +35,10 @@ The local Supabase keys are deterministic — they stay the same across `supabas
 
 See `README.md` and `package.json` scripts for lint (`npm run lint`), test (`npx vitest run`), dev server (`npm run dev`), and database commands (`npm run db:*`).
 
+Record a demo video of your work, not just showing the app but also talking about your thought process and decisions of why you did what you did.  Just like how a junior engineer would explain things to their seniors, so the seniors can easily review your work and judge your decisions.  first record the video like you normally would, then generate the audio/video, and then put them together (and upload the final video as an artifact.)
 
-narrate every video you record like a human — i gave you an ELEVEN_LABS_API_KEY. first record the video like you normally would, then generate the audio, and then put them together (and upload the final video as an artifact.) see https://elevenlabs.io/docs/llms-full.txt and use voice ID: wWWn96OtTHu1sn8SRGEr
+use HEYGEN_API_KEY 
+
+https://app.heygen.com/avatar/my-avatars/2cb30f2d23d549ae8071f7219269a58f?returnTo=%2Favatar%2Fmy-avatars
+
+https://app.heygen.com/avatar/my-avatars/2cb30f2d23d549ae8071f7219269a58f?returnTo=%2Favatar%2Fmy-avatars
