@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js + Supabase Starter",
-  description: "A modern web application with authentication",
+  title: "Momentum — the to-do list that actually gets done",
+  description:
+    "Momentum is a fast, calm todo app. Capture tasks in a keystroke, organise them into lists with due dates and priorities, and sync everywhere in real time.",
 };
 
 export default function RootLayout({
